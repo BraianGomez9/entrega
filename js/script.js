@@ -4,7 +4,6 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Obtener productos desde API
 async function fetchProducts() {
     try {
         const response = await fetch('https://dummyjson.com/products');
@@ -15,7 +14,6 @@ async function fetchProducts() {
     }
 }
 
-// Mostrar productos en index.html
 function displayProducts(products) {
     const productsDiv = document.getElementById('products');
     if (!productsDiv) return;
@@ -35,7 +33,7 @@ function displayProducts(products) {
     });
 }
 
-// Mostrar detalle de producto
+
 async function showProductDetail(productId) {
     try {
         const response = await fetch(`https://dummyjson.com/products/${productId}`);
@@ -56,7 +54,7 @@ async function showProductDetail(productId) {
     }
 }
 
-// Agregar al carrito
+
 function addToCart(id, title, price, thumbnail) {
     const existingItem = cart.find(item => item.id === id);
     if (existingItem) {
@@ -74,7 +72,7 @@ function addToCart(id, title, price, thumbnail) {
     updateCartCount();
 }
 
-// Mostrar el carrito completo con imagen, subtotal y total
+
 function updateCart() {
     const cartItems = document.getElementById('cart-items');
     const cartEmpty = document.getElementById('cart-empty');
@@ -125,7 +123,7 @@ function updateCart() {
     saveCart();
 }
 
-// Cambiar cantidad
+
 function updateQuantity(id, change) {
     const item = cart.find(item => item.id === id);
     if (item) {
@@ -137,7 +135,7 @@ function updateQuantity(id, change) {
     }
 }
 
-// Vaciar carrito
+
 function clearCart() {
     cart = [];
     updateCart();
