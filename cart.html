@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+        <a href="index.html">Volver a Productos</a>
+        <div id="cart" class="cart">
+            <div id="cart-items"></div>
+            <p id="cart-empty" style="display: none;">El carrito está vacío.</p>
+            <button class="clear-cart" onclick="clearCart()">Vaciar Carrito</button>
+            <button class="buy-button" onclick="finalizarCompra()">Comprar</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCart();
+        });
+    </script>
+</body>
+
+</html>

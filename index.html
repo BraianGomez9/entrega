@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="products-container">
+        <h1>Tienda de Productos</h1>
+        <a href="cart.html" class="cart-link">
+            Ver Carrito <span id="cart-count" class="cart-count">(0)</span>
+        </a>
+        <div id="products" class="products-grid"></div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchProducts();
+            updateCartCount();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detalle del Producto</h1>
+        <a href="index.html">Volver a Productos</a> | <a href="cart.html">Ver Carrito</a>
+        <div id="product-detail" class="product-detail"></div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        if (productId) {
+            showProductDetail(productId);
+        } else {
+            document.getElementById('product-detail').innerHTML = '<p>Producto no encontrado.</p>';
+        }
+    </script>
+</body>
+</html>
