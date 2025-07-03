@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="cart.html">Carrito</a>
+            <a href="contact.html" class="active">Contacto</a>
+        </nav>
+    </header>
+
+    <form action="https://formspree.io/f/meokdvlg" method="POST" class="contact-form">
+
+        <div class="form-group">
+            <label for="name">Tu nombre:</label>
+            <input type="name" name="name" id="name" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Tu correo electrónico:</label>
+            <input type="email" name="email" id="email" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Tu mensaje:</label>
+            <textarea name="message" id="message" class="form-textarea" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="form-button">Enviar</button>
+    </form>
+
+</body>
+
+</html>

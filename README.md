@@ -14,7 +14,7 @@ Este es un proyecto simple de tienda de productos hecho con **HTML**, **CSS** y 
 - ✅ Persistencia en `localStorage`
 - ✅ Botón para vaciar el carrito
 - ✅ Botón de compra con alert de confirmación
-
+- ✅ Formulario de contacto funcional con Formspree
 ---
 
 ## 🗂 Estructura del proyecto
